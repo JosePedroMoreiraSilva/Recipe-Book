@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Meals = () => {
   const { category } = useParams();
   const navigate = useNavigate();
-  
+
   const [mealsList, setMealsList] = useState([]);
 
   const goToRecipe = (event, idMeal) => {
@@ -19,10 +19,7 @@ const Meals = () => {
   };
 
   useEffect(() => {
-
-    fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
-    )
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
       .then((response) => response.json())
       .then((data) => setMealsList(data.meals));
   }, [category]);
@@ -38,7 +35,12 @@ const Meals = () => {
                 <Card.Img variant="top" src={meal.strMealThumb} />
                 <Card.Body>
                   <Card.Title>{meal.strMeal}</Card.Title>
-                  <Button variant="primary" onClick={(ev) => goToRecipe(ev, meal.idMeal)}>Go somewhere</Button>
+                  <Button
+                    variant="primary"
+                    onClick={(ev) => goToRecipe(ev, meal.idMeal)}
+                  >
+                    Go somewhere
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
