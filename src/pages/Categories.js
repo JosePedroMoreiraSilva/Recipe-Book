@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useNavigate } from "react-router-dom";
+import SearchBar from "../components/searchBar";
 
 const Categories = () => {
   const navigate = useNavigate();
@@ -25,7 +26,9 @@ const Categories = () => {
   return (
     <div>
       <h2> Categories</h2>
+      
       <Container>
+      <SearchBar/>
         <Row>
           {categories.map((category) => (
             <Col xs={6} md={4} style={{ padding: "15px" }}>
