@@ -4,16 +4,13 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = () => {
-  //   const { category } = useParams();
-  //   const navigate = useNavigate();
 
   //   const [mealsList, setMealsList] = useState([]);
 
